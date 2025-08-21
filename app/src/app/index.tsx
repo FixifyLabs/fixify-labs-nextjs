@@ -33,13 +33,13 @@ const ContactFormSection = () => {
   };
 
   return (
-    <section className="relative self-stretch w-full h-[821px] bg-gradient-to-br from-[#fe319c] via-[#eeacd8] via-[#e4faff] to-[#f4336c] flex items-center justify-center">
+    <section className="relative self-stretch w-full h-[821px] bg-gradient-to-br from-[#fe319c] via-[#e4faff] to-[#f4336c] flex items-center justify-center">
       <div className="bg-white/90 backdrop-blur-sm rounded-lg p-8 max-w-md w-full mx-4 shadow-lg">
         <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">
           Contact Us Today
         </h2>
         <p className="text-gray-600 text-center mb-6">
-          Have questions? Need a custom quote? Let's connect!
+          Have questions? Need a custom quote? Let&apos;s connect!
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-4">

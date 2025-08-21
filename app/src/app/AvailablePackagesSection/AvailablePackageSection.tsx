@@ -1,6 +1,6 @@
 import React from "react";
 
-export const AvailablePackagesSection = (): JSX.Element => {
+export const AvailablePackagesSection = () => {
   const packageData = {
     title: "Stripe Payment API Key Integration & Installation",
     description:

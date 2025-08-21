@@ -1,6 +1,6 @@
 import React from "react";
 
-export const PricingSection = (): JSX.Element => {
+export const PricingSection = () => {
   const pricingTiers = [
     {
       title: "Basic Support",

@@ -1,6 +1,6 @@
 import React from "react";
 
-export const PackagesOverviewSection = (): JSX.Element => {
+export const PackagesOverviewSection = () => {
   const problemAreas = [
     {
       text: "getting out of endless loops and roadblocks with applications like Basecamp44 & Lovable",

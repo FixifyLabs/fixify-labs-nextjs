@@ -45,7 +45,9 @@ export const FooterSection = () => {
     { name: "message", label: "Message", type: "textarea" },
   ];
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -53,7 +55,7 @@ export const FooterSection = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
   };
@@ -116,7 +118,7 @@ export const FooterSection = () => {
                   <textarea
                     id={field.name}
                     name={field.name}
-                    value={formData[field.name]}
+                    value={"message"}
                     onChange={handleInputChange}
                     placeholder="Value"
                     className="leading-[var(--body-base-line-height)] relative flex-1 mt-[-0.50px] font-body-base font-[number:var(--body-base-font-weight)] text-color-text-default-tertiary text-[length:var(--body-base-font-size)] tracking-[var(--body-base-letter-spacing)] [font-style:var(--body-base-font-style)] bg-transparent border-none outline-none resize-none"
@@ -127,7 +129,7 @@ export const FooterSection = () => {
                     type={field.type}
                     id={field.name}
                     name={field.name}
-                    value={formData[field.name]}
+                    value={"message"}
                     onChange={handleInputChange}
                     placeholder="Value"
                     className="leading-[var(--single-line-body-base-line-height)] relative flex-1 mt-[-0.50px] font-single-line-body-base font-[number:var(--single-line-body-base-font-weight)] text-color-text-default-tertiary text-[length:var(--single-line-body-base-font-size)] tracking-[var(--single-line-body-base-letter-spacing)] [font-style:var(--single-line-body-base-font-style)] bg-transparent border-none outline-none"
