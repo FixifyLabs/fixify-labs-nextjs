@@ -27,9 +27,25 @@ const ContactFormSection = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    try {
+      const response = await fetch('/api/email-service', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+      console.log('Message sent successfully');
+      // Optionally reset form or show success message here
+    } catch (error) {
+      console.error('Error sending message:', error);
+      // Optionally show error message here
+    }
   };
 
   return (
